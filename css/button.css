@@ -1,0 +1,478 @@
+.searchBtn {
+    position: relative;
+    top: -2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 24px;
+    padding-bottom: 6px;
+    font-size: 1rem;
+    border: none;
+    background: #f60;
+    color: #fff;
+    outline: 1px solid #0001;
+    box-shadow: 0 2px 0 #e50;
+    filter: drop-shadow(0 2px 0 #0001);
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .2s cubic-bezier(0, 1, 1, 1);
+}
+
+.searchBtn:hover {
+    top: -4px;
+    color: #fffd;
+    box-shadow: 0 4px 0 #e50;
+    filter: drop-shadow(0 4px 0 #0001);
+}
+
+.searchBtn:active {
+    top: -2px;
+    color: #fffb;
+    background: #e50;
+    box-shadow: 0 2px 0 #c40;
+    filter: drop-shadow(0 2px 0 #0001);
+}
+
+.menuBtn {
+    position: relative;
+    top: -2px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    width: 36px;
+    height: 36px;
+    background: #f60;
+    color: #fff;
+    outline: 1px solid #0001;
+    box-shadow: 0 2px 0 #e50;
+    filter: drop-shadow(0 2px 0 #0001);
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .2s cubic-bezier(0, 1, 1, 1);
+}
+
+.menuBtn:hover {
+    top: -4px;
+    color: #fffd;
+    box-shadow: 0 4px 0 #e50;
+    filter: drop-shadow(0 4px 0 #0001);
+}
+
+.menuBtn:active {
+    top: -2px;
+    color: #fffb;
+    background: #e50;
+    box-shadow: 0 2px 0 #c40;
+    filter: drop-shadow(0 2px 0 #0001);
+}
+
+/* Rank Button */
+.primaryBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 16px;
+    font-size: 1rem;
+    color: #fff;
+    background: #f60;
+    border-radius: 4px;
+    border: none;
+    outline: 1px solid #0001;
+    width: max-content;
+    text-decoration: none;
+}
+
+.primaryBtn:hover {
+    cursor: pointer;
+    color: #fffd;
+}
+
+.primaryBtn:active {
+    color: #fffb;
+    background: #e50;
+}
+
+.primaryBtn i {
+    font-weight: normal;
+    font-size: 1.5em;
+}
+
+.secondaryBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 16px;
+    font-size: 1rem;
+    color: #f60;
+    background: none;
+    border-radius: 4px;
+    border: none;
+    border: 1px solid #f60;
+    width: max-content;
+    text-decoration: none;
+}
+
+.secondaryBtn:hover {
+    cursor: pointer;
+    color: #fff;
+    background: #f60;
+    outline: 1px solid #0001;
+}
+
+.secondaryBtn:active {
+    background: #e50;
+}
+
+.secondaryBtn i {
+    font-weight: normal;
+    font-size: 1.5em;
+}
+
+.tertiaryBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 16px;
+    font-size: 1rem;
+    color: #0006;
+    background: #0001;
+    border-radius: 4px;
+    border: none;
+    outline: 1px solid #0001;
+    width: max-content;
+    text-decoration: none;
+}
+
+.tertiaryBtn:hover {
+    cursor: pointer;
+    color: #000;
+}
+
+.tertiaryBtn:active {
+    background: #0002;
+}
+
+.tertiaryBtn i {
+    font-weight: normal;
+    font-size: 1.5em;
+}
+
+.quaternaryBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 16px;
+    font-size: 1rem;
+    color: #0006;
+    background: none;
+    border-radius: 4px;
+    border: none;
+    outline: 1px solid #0001;
+    width: max-content;
+    text-decoration: none;
+}
+
+.quaternaryBtn:hover {
+    cursor: pointer;
+    color: #000;
+}
+
+.quaternaryBtn:active {
+    background: #0001;
+}
+
+.quaternaryBtn i {
+    font-weight: normal;
+    font-size: 1.5em;
+}
+
+/* Icon Button */
+.iconBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    width: 36px;
+    height: 36px;
+    outline: 1px solid #0001;
+    outline-offset: -1px;
+    border-radius: 36px;
+    color: #0006;
+    text-decoration: none;
+}
+
+.iconBtn:hover {
+    cursor: pointer;
+    background: #0001;
+}
+
+.iconBtn:active {
+    background: #0002;
+}
+
+/* Favorite Button */
+.favBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    width: 36px;
+    height: 36px;
+    outline-offset: -1px;
+    border-radius: 36px;
+    color: #0002;
+}
+
+.favBtn:hover {
+    cursor: pointer;
+    background: #0001;
+}
+
+.favBtn:active {
+    background: #0002;
+}
+
+input:checked+.favBtn {
+    color: #f60;
+}
+
+.chatBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    width: 36px;
+    height: 36px;
+    outline-offset: -1px;
+    border-radius: 36px;
+    text-decoration: none;
+    color: #0002;
+}
+
+.chatBtn:hover {
+    cursor: pointer;
+    background: #0001;
+}
+
+.chatBtn:active {
+    background: #0002;
+}
+
+.textBtn {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    white-space: nowrap;
+    color: #0006;
+    overflow: hidden;
+}
+
+.textBtn:hover {
+    color: #000;
+}
+
+.textBtn:active {
+    color: #f60;
+}
+
+.textBtn i {
+    padding: 0 4px;
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+.textBtnB {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    white-space: nowrap;
+    color: #0006;
+    outline: 1px solid #0001;
+    overflow: hidden;
+}
+
+.textBtnB:hover {
+    color: #000;
+    background: #0001;
+}
+
+.textBtnB:active {
+    color: #f60;
+}
+
+.textBtnB i {
+    padding: 0 4px;
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+.textBtnH {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    white-space: nowrap;
+    color: #fff;
+    overflow: hidden;
+}
+
+.textBtnH:hover {
+    color: #fffd;
+}
+
+.textBtnH:active {
+    color: #fffb;
+}
+
+.textBtnH i {
+    padding: 0 4px;
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+.textBtnH .shopAmount {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 1rem;
+    height: 1rem;
+    margin-left: 4px !important;
+    color: #0004;
+    background: #0002;
+    border-radius: 256px;
+    font-weight: bold;
+    padding: 0 4px;
+    padding-top: 1px;
+    font-size: 0.5rem;
+    margin-left: auto;
+}
+
+.textBtnHH {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    white-space: nowrap;
+    color: #f60;
+    overflow: hidden;
+}
+
+.textBtnHH:hover {
+    text-decoration: underline !important;
+}
+
+.textBtnHH:active {
+    color: #e50;
+}
+
+.textBtnHH i {
+    padding: 0 4px;
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+.textBtn .valueAmount {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 1rem;
+    height: 1rem;
+    margin-left: 4px;
+    color: #fff;
+    background: #f00;
+    border-radius: 256px;
+    font-weight: bold;
+    padding: 0 4px;
+    padding-top: 1px;
+    font-size: 0.5rem;
+    margin-left: auto;
+}
+
+/* List Button */
+.listBtn {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    white-space: nowrap;
+    color: #0006;
+    overflow: hidden;
+}
+
+.listBtn:hover {
+    color: #000;
+    background: #0001;
+}
+
+.listBtn:active {
+    color: #f60;
+}
+
+.listBtn i {
+    padding: 0 4px;
+    font-weight: normal;
+}
+
+.listBtn .shopAmount {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 1rem;
+    height: 1rem;
+    margin-left: 4px;
+    color: #0004;
+    background: #0002;
+    border-radius: 256px;
+    font-weight: bold;
+    padding: 0 4px;
+    padding-top: 1px;
+    font-size: 0.5rem;
+    margin-left: auto;
+}
+
+.next {
+    position: relative;
+}
+
+.next::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    translate: -50% -50%;
+    border-radius: 8px;
+    width: 8px;
+    height: 8px;
+    background: #eee;
+}
+
+
+/* logout Button */
+.logoutBtn {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    border: 1px solid #f60;
+    color: #f60;
+    padding: 4px 0;
+    border-radius: 4px;
+}
+
+.logoutBtn:hover {
+    background: #f60;
+    color: #fff;
+    outline: 1px solid #0001;
+}
+
+.logoutBtn:active {
+    background: #e50;
+    color: #fff;
+}

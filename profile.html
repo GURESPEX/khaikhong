@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/slide.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <title>ขายของ - ข้อมูลส่วนตัว</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <main>
+            <article>
+                <div class="wrapper">
+                    <h1 class="categoryTitle"><span id="categoryTitle"><i
+                                class="ri-profile-fill"></i>ข้อมูลส่วนตัว</span></h1>
+                    <div class="itemBox">
+                        <section class="h">
+                            <section class="profileMenu v">
+                                <a href="profile.html" class="textBtn here"><i
+                                        class="ri-profile-line"></i>ข้อมูลส่วนตัว</a>
+                                <a href="topup.html" class="textBtn"><i class="ri-hand-coin-line"></i>เติมเครดิต</a>
+                                <hr class="hrH">
+                                <a href="cart.html" class="textBtn"><i class="ri-shopping-cart-2-line"></i>รถเข็น<p
+                                        class="valueAmount">0</p></a>
+                                <a href="favorite.html" class="textBtn"><i class="ri-heart-line"></i>สินค้าที่ถูกใจ
+                                    <p class="valueAmount">0</p>
+                                </a></a>
+                                <a href="chat.html" class="textBtn"><i class="ri-message-2-line"></i>แชท<p
+                                        class="valueAmount">0
+                                    </p></a>
+                                <a href="orderList.html" class="textBtn"><i
+                                        class="ri-file-list-3-line"></i>รายการสั่งซื้อ</a>
+                            </section>
+                            <section class="profileContent v">
+                                <div class="profileImgBox">
+                                    <img src="" width="128" height="128">
+                                    <p class="username" id="username">
+                                        Unknown
+                                    </p>
+                                </div>
+                                <section class="h">
+                                    <section class="v">
+                                        <h2 class="infoTitle">ข้อมูลส่วนตัว</h2>
+                                        <p class="info">
+                                            อีเมล : natt********@kkumail.com <br>
+                                            เบอร์โทรศัพท์ : 091-234-5678
+                                        </p>
+                                    </section>
+                                    <section class="v">
+                                        <h2 class="infoTitle">ที่อยู่จัดส่ง</h2>
+                                        <p class="info">
+                                            บ้านเลขที่ 18 หมู่ 4 ตำบล หนองขี้หมู อำเภอ เมืองขอนแก่น จังหวัด ขอนแก่น
+                                            47191
+                                        </p>
+                                    </section>
+                                </section>
+                            </section>
+                        </section>
+                    </div>
+            </article>
+            <footer>
+                <div class="wrapper">
+                    <a href="terms.html" class="textBtn"
+                        onclick="localStorage.setItem('productTitle',this.innerHTML)">เงื่อนไขการใช้บริการ</a>
+                    <a href="about.html" class="textBtn"
+                        onclick="localStorage.setItem('productTitle',this.innerHTML)">เกี่ยวกับเรา</a>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="component/navigation.js"></script>
+
+    <script src="data/store.js"></script>
+    <script src="data/user.js"></script>
+
+    <script src="js/global.js"></script>
+    <script src="js/slide.js"></script>
+    <script src="js/redirect.js"></script>
+
+</body>
+
+</html>

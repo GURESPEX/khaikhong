@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/slide.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <title>ขายของ</title>
+</head>
+
+<body>
+    <div class="reviewForm">
+        <div class="wrapper">
+            <form class="form">
+                <fieldset>
+                    <legend>
+                        เขียนรีวิว
+                        <a href="#" class="iconBtn" onclick="document.querySelector('.reviewForm').style.display = 'none'">
+                            <i class="ri-close-fill"></i>
+                        </a>
+                    </legend>
+                    <div class="vBox">
+                        <label for="password">เขียนรีวิวของคุณ</label>
+                        <textarea rows="10" placeholder="..."></textarea>
+                    </div>
+                    <button type="button" class="primaryBtn" onclick="formReview('close')">ยืนยัน</button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <main>
+            <article>
+                <div class="wrapper">
+                    <h1 class="categoryTitle"><span>ข้อมูลสินค้า</span></h1>
+                    <div class="itemBox">
+                        <div class="productInfo" id="productInfo">
+                            <!-- Product Info -->
+                        </div>
+                        <div class="productSlider" id="productSlider">
+                            <!-- Random Product -->
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <footer>
+                <div class="wrapper">
+                    <a href="terms.html" class="textBtn"
+                        onclick="localStorage.setItem('productTitle',this.innerHTML)">เงื่อนไขการใช้บริการ</a>
+                    <a href="about.html" class="textBtn"
+                        onclick="localStorage.setItem('productTitle',this.innerHTML)">เกี่ยวกับเรา</a>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="component/navigation.js"></script>
+
+    <script src="data/store.js"></script>
+    <script src="data/user.js"></script>
+
+    <script src="js/global.js"></script>
+    <script src="js/productInfo.js"></script>
+    <script src="js/slide.js"></script>
+    <script src="js/redirect.js"></script>
+
+</body>
+
+</html>

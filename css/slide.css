@@ -1,0 +1,59 @@
+/* Swiper Advertisment */
+.swiperAds {
+    width: 100%;
+    overflow: visible;
+}
+
+.swiperAds img {
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 3/1;
+}
+
+.swiper-wrapper{
+    display: flex;
+    
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    width: 36px;
+    height: 36px;
+    border-radius: 36px;
+    outline: 1px solid #0001;
+    background: #fff;
+}
+
+.swiper-button-next:active,
+.swiper-button-prev:active {
+    background: #eee;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    position: relative;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #f60;
+}
+
+.swiper-button-prev::after {
+    right: 1px;
+}
+
+.swiper-button-next::after {
+    left: 1px;
+}
+
+.swiper-scrollbar {
+    background: #0002;
+    left: 50% !important;
+    translate: -50% -100% !important;
+    width: 20% !important;
+    top: calc(100% - 8px) !important;
+}
+
+.swiper-scrollbar-drag {
+    background: #f60;
+}

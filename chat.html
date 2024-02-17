@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/slide.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <title>ขายของ - แชท</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <main>
+            <article>
+                <div class="wrapper">
+                    <h1 class="categoryTitle"><span id="categoryTitle"><i class="ri-message-2-fill"></i>แชท</span></h1>
+                    <div class="itemBox">
+                        <section class="h">
+                            <section class="profileMenu profileBox v">
+                                <a href="profile.html" class="textBtn"><i class="ri-profile-line"></i>ข้อมูลส่วนตัว</a>
+                                <a href="topup.html" class="textBtn"><i class="ri-hand-coin-line"></i>เติมเครดิต</a>
+                                <hr class="hrH">
+                                <a href="cart.html" class="textBtn"><i class="ri-shopping-cart-2-line"></i>รถเข็น<p
+                                        class="valueAmount">0</p></a>
+                                <a href="favorite.html" class="textBtn"><i class="ri-heart-line"></i>สินค้าที่ถูกใจ
+                                    <p class="valueAmount">0</p>
+                                </a></a>
+                                <a href="chat.html" class="textBtn here"><i class="ri-message-2-line"></i>แชท<p
+                                        class="valueAmount">0
+                                    </p></a>
+                                <a href="orderList.html" class="textBtn"><i
+                                        class="ri-file-list-3-line"></i>รายการสั่งซื้อ</a>
+                            </section>
+                            <section class="profileContent h">
+                                <div class="chatShop">
+                                    <div class="shopFront">
+                                        <img src="img/store_image/S0.png" width="48" height="48">
+                                        <p>Samsung Official Store</p>
+                                    </div>
+                                    <div class="shopFront">
+                                        <img src="img/store_image/S1.png" width="48" height="48">
+                                        <p>Xiaomi Official Store</p>
+                                    </div>
+                                    <div class="shopFront">
+                                        <img src="img/store_image/S2.png" width="48" height="48">
+                                        <p>Toshiba Official Store</p>
+                                    </div>
+                                    <div class="shopFront">
+                                        <img src="img/store_image/S3.png" width="48" height="48">
+                                        <p>LG Official Store</p>
+                                    </div>
+                                    <div class="shopFront">
+                                        <img src="img/store_image/S4.png" width="48" height="48">
+                                        <p>Sony Official Store</p>
+                                    </div>
+                                    <div class="shopFront">
+                                        <img src="img/store_image/S5.png" width="48" height="48">
+                                        <p>Daikin Official Store</p>
+                                    </div>
+                                    <div class="shopFront">
+                                        <img src="img/store_image/S6.png" width="48" height="48">
+                                        <p>Philips Official Store</p>
+                                    </div>
+                                    <div class="shopFront">
+                                        <img src="img/store_image/S7.png" width="48" height="48">
+                                        <p>ร้านนายชำระ</p>
+                                    </div>
+                                </div>
+                                <div class="chatDetail">
+                                    <div class="message">
+                                        <div class="shopBox">
+                                            <img src="img/store_image/S0.png" width="40" height="40">
+                                            <div class="shopTextBox">
+                                                <p class="shopText">สวัสดีครับสุดหล่อ ให้ช่วยอะไรครับ</p>
+                                            </div>
+                                        </div>
+                                        <div class="userBox">
+                                            <div class="userTextBox">
+                                                <p class="userText">คือว่า...</p>
+                                                <p class="userText">ขอตังหน่อยคับ :D</p>
+                                            </div>
+                                        </div>
+                                        <div class="shopBox">
+                                            <img src="img/store_image/S0.png" width="40" height="40">
+                                            <div class="shopTextBox">
+                                                <p class="shopText">ช๊อตเหมือนกันครับช่วงนี้</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="textMessage">
+                                        <input type="text">
+                                        <button class="primaryBtn">ส่ง</button>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+                    </div>
+            </article>
+            <footer>
+                <div class="wrapper">
+                    <a href="terms.html" class="textBtn"
+                        onclick="localStorage.setItem('productTitle',this.innerHTML)">เงื่อนไขการใช้บริการ</a>
+                    <a href="about.html" class="textBtn"
+                        onclick="localStorage.setItem('productTitle',this.innerHTML)">เกี่ยวกับเรา</a>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="component/navigation.js"></script>
+
+    <script src="data/store.js"></script>
+    <script src="data/user.js"></script>
+
+    <script src="js/global.js"></script>
+    <script src="js/slide.js"></script>
+    <script src="js/redirect.js"></script>
+
+</body>
+
+</html>

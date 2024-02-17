@@ -1,0 +1,355 @@
+@media screen and (max-width: 1280px) {
+    .logo2 {
+        padding-left: 16px;
+        border-radius: 0 0 24px 0;
+    }
+
+    .userOnline {
+        border-radius: 0 0 0 8px;
+        width: 256px;
+        margin-right: 0;
+    }
+
+    .userMinInfo {
+        translate: 100% -16px;
+        border-radius: 0 0 0 8px;
+    }
+
+    .categoryTitle {
+        border-radius: 0;
+    }
+
+    .categoryTitle span:first-child {
+        border-radius: 0;
+    }
+
+    .itemGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    #profileGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .navShowMenu>li>a[href="terms.html"],
+    .navShowMenu>li>a[href="about.html"],
+    .navShowMenu hr {
+        display: none;
+    }
+
+    .itemGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #profileGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .profileGridCart {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    #profileGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .productInfoBox {
+        flex-direction: column;
+    }
+
+    .productInfoBox .productCol {
+        width: 100%;
+    }
+
+    .productInfoBox .productInfoDetail .productInfoName {
+        font-size: 1.2rem;
+    }
+
+    .productInfoBox .productInfoDetail .productInfoPrice {
+        font-size: 2.2rem;
+    }
+
+    .sideMenu {
+        display: flex;
+    }
+
+    .menuBtn {
+        display: flex;
+    }
+
+    .logo {
+        width: 144px;
+    }
+
+    .logo2 {
+        width: 124px;
+        border-radius: 0;
+        background: none;
+    }
+
+    nav .wrapper {
+        padding-left: calc(124px + 0px);
+        padding-right: 16px;
+    }
+
+    nav:nth-of-type(3) .wrapper {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+
+    .userOnline {
+        display: none;
+    }
+
+    nav:nth-of-type(3) .wrapper {
+        justify-content: center;
+    }
+
+    .navShowMenu {
+        width: max-content;
+    }
+
+    .categoryTitle {
+        font-size: 1.25rem;
+    }
+
+    .itemGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .chatShop {
+        display: none;
+    }
+
+    #profileGrid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .productSliderTitle {
+        font-size: 0.8rem;
+    }
+
+    .categoryBox a p {
+        font-size: 0.8rem;
+    }
+
+    .productInfoBox .productInfoDetail .shopBoxDetail .shopBoxDetailV .productInfoStar {
+        display: none;
+    }
+
+    .productInfoBox .productInfoDetail .productInfoName {
+        font-size: 1rem;
+    }
+
+    .productInfoBox .productInfoDetail .productInfoPrice {
+        font-size: 2rem;
+    }
+
+    .searchItem {
+        margin: 0 -16px;
+        padding-top: 8px;
+    }
+
+    .sideMenu {
+        width: 100%;
+    }
+
+    .logo {
+        width: 128px;
+        translate: 0 8px;
+    }
+
+    .logo2 {
+        width: 108.297px;
+    }
+
+    nav .wrapper {
+        padding-left: calc(108.297px);
+        padding-right: 16px;
+    }
+
+    .userMinInfo {
+        width: 100%;
+    }
+
+    nav:nth-of-type(3) {
+        display: none;
+    }
+
+    .categoryTitle {
+        font-size: 1rem;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .itemGrid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .productCard {
+        flex-direction: row;
+    }
+
+    .productCard .imgBox {
+        width: 40%;
+    }
+
+    .productCard .imgBox .saleText {
+        bottom: 0;
+        left: 0;
+        right: unset;
+        border-radius: 0 4px 0 0;
+    }
+
+    .productCard .productDetail .productName {
+        font-size: clamp(0.8em, 4vw, 1em);
+        -webkit-line-clamp: 1;
+    }
+
+    .productCard .productDetail .productPrice {
+        margin-top: auto;
+        font-size: clamp(1em, 5vw, 12em);
+    }
+
+    .productCard .productDetail .productSale {
+        font-size: clamp(0.6em, 3vw, 0.8em);
+    }
+
+    .productCard .productDetail .productStar {
+        font-size: 0.8em;
+    }
+
+    /* shopCard */
+    .shopCard {
+        flex-direction: row;
+    }
+
+    .shopCard .imgBox {
+        width: 40%;
+    }
+
+    .shopCard .shopDetail .shopName {
+        text-align: left;
+        font-size: clamp(0.8em, 4vw, 1em);
+    }
+
+    .shopCard .shopDetail .shopDescription {
+        font-size: clamp(0.6em, 4vw, 0.8em);
+    }
+
+    .shopCard .shopDetail .shopStar {
+        font-size: 0.8em;
+    }
+
+    /* shopInfo */
+    .shopInfo {
+        flex-direction: column;
+        height: unset;
+    }
+
+    .shopInfo .imgBox {
+        width: calc(100% - 32px);
+        align-self: center;
+        border-radius: 100%;
+        margin-top: 16px;
+    }
+
+    .shopInfo .shopInfoDetail .shopInfoName {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .shopInfo .shopInfoDetail .shopInfoDescription {
+        overflow: scroll;
+        height: 128px;
+    }
+
+    section.h {
+        flex-direction: column;
+    }
+
+    section.v:not(:last-child) {
+        padding-right: 0;
+        border-right: none;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #0001;
+    }
+
+    .categoryTitle span:nth-child(1) {
+        text-align: center;
+    }
+
+    .profileMenu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 100;
+        translate: 0 -100%;
+        background: #eee;
+        width: 100%;
+        max-width: unset;
+        padding: 16px !important;
+        outline: 1px solid #0001;
+        filter: drop-shadow(0 2px 0 #0001);
+        transition: .2s cubic-bezier(0, 1, 1, 1);
+    }
+
+    .profileMenu:hover {
+        translate: 0 0;
+    }
+
+    .profileMenu::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: calc(100% - 32px);
+        translate: -50% 0;
+        width: 40px;
+        height: 40px;
+        background: #f60;
+        outline: 1px solid #0001;
+        outline-offset: -1px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 75%, 0 100%);
+    }
+}
+
+@media screen and (max-width: 360px) {
+    /*.logoText,.logo2Text {
+        display: block;
+    }
+
+    .logo,
+    .logo2 {
+        display: none;
+    }*/
+
+    nav:nth-of-type(1) .wrapper>a[href="index.html"] {
+        margin-right: auto;
+    }
+
+    /*nav .wrapper {
+        padding-left: 16px;
+        padding-right: 16px;
+    }*/
+
+    nav:nth-of-type(2) .wrapper .searchForm {
+        display: none;
+    }
+
+    nav:nth-of-type(2) .wrapper .menuBtn {
+        margin-left: auto;
+    }
+}

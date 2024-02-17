@@ -1,0 +1,2270 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap');
+
+@font-face {
+    font-family: KungPhao;
+    src: url("../font/MN Kung Phao Bold.ttf");
+}
+
+* {
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+    box-sizing: border-box;
+    /*outline: 1px solid red;
+    /**/
+    outline-offset: -1px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0;
+    border-bottom: 1px solid #0001;
+}
+
+.title section:nth-child(1) {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.title section:nth-child(2) {
+    color: #0006;
+}
+
+.forgot {
+    margin-left: auto;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.content p {
+    text-indent: 2rem;
+}
+
+.content img {
+    padding: 16px;
+    width: 100%;
+    max-width: 512px;
+    margin: 0 auto;
+    filter: grayscale(1);
+    transition: .2s cubic-bezier(0, 1, 1, 1);
+}
+
+.content img:hover {
+    filter: grayscale(0);
+}
+
+.darkBG {
+    background: #126;
+}
+
+/* Logo */
+.logoText {
+    display: none;
+    width: 96px;
+    transition: .2s cubic-bezier(0, 1, 1, 1);
+}
+
+.logoText:hover {
+    cursor: pointer;
+    animation: logoAnimation .5s .2s forwards;
+    transition: .2s cubic-bezier(0.5, 3, 0.5, 1);
+}
+
+.logoText:active {
+    filter: brightness(0.95);
+    transition: .2s cubic-bezier(0, 1, 1, 1);
+}
+
+.logo2Text {
+    display: none;
+    width: 96px;
+}
+
+.logo {
+    position: absolute;
+    top: -48px;
+    left: 0;
+    width: 160px;
+    margin-left: 16px;
+    transform-origin: top center;
+    filter: drop-shadow(0 2px 0 #0001) brightness(1);
+    transition: .2s cubic-bezier(0, 1, 1, 1);
+}
+
+.logo:hover {
+    top: -40px;
+    cursor: pointer;
+    filter: drop-shadow(0 4px 0 #0001);
+    animation: logoAnimation .5s forwards;
+    transition: .2s cubic-bezier(0.5, 3, 0.5, 1);
+}
+
+.logo:active {
+    top: -44px;
+    filter: drop-shadow(0 2px 0 #0001) brightness(0.95);
+    transition: .2s cubic-bezier(0, 1, 1, 1);
+}
+
+.logo2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 160px;
+    padding: 8px;
+    background: #126;
+    border-radius: 0 0 24px 24px;
+}
+
+@keyframes logoAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(2deg);
+    }
+
+    50% {
+        transform: rotate(-2deg);
+    }
+
+    75% {
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* hrLine */
+.hrH {
+    width: 100%;
+    height: 1px;
+    border: none;
+    background: #0001;
+    margin: 8px 0;
+}
+
+.hrV {
+    width: 1px;
+    height: 100%;
+    border: none;
+    background: #0001;
+}
+
+/* Container*/
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #0001;
+}
+
+/* --- Navigation --- */
+nav {
+    display: flex;
+    flex-direction: column;
+    background: #126
+}
+
+nav .wrapper {
+    display: flex;
+    flex-direction: row;
+    padding-left: calc(160px + 16px);
+    padding-right: calc(256px + 16px);
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    transition: .2s cubic-bezier(0, 1, 1, 1);
+}
+
+/* ------ Navigation Wrapper 1 --- */
+nav:nth-of-type(1) {
+    background: #126;
+    order: 1;
+}
+
+nav:nth-of-type(1) .wrapper {
+    position: relative;
+    justify-content: flex-end;
+    gap: 16px;
+    z-index: 20;
+}
+
+nav:nth-of-type(1) .wrapper>a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 4px 0;
+    font-size: 0.8rem;
+    min-height: 29px;
+}
+
+nav:nth-of-type(1) .wrapper>a:nth-of-type(4) {
+    display: none;
+}
+
+.userOnline {
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 8px;
+    width: 240px;
+    height: 150%;
+    margin-right: 16px;
+    color: #fff;
+    border-radius: 0 0 8px 8px;
+    background: #f60;
+    outline: 1px solid #0001;
+    font-size: 0.8rem;
+    font-weight: bold;
+    box-shadow: 0 2px 0 #0001;
+    transition: .2s cubic-bezier(0, 1, 1, 1);
+}
+
+.userOnline:hover {
+    cursor: pointer;
+    height: 175%;
+    box-shadow: 0 4px 0 #0001;
+}
+
+.userOnline:active {
+    background: #e50;
+}
+
+.userOnline i {
+    font-size: 1.2rem;
+}
+
+#userCredit,
+#userName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    max-width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+}
+
+#userCredit i {
+    position: relative;
+    top: -1px;
+    font-weight: normal;
+    font-size: 1.5em;
+}
+
+#userName>img {
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    border-radius: 32px;
+    outline: 4px solid #0001;
+    outline-offset: -2px;
+}
+
+.userMinInfo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    top: 100%;
+    padding-top: 32px;
+    left: 0;
+    translate: 0 -100%;
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    border-radius: 0 0 8px 8px;
+    outline: 1px solid #0001;
+    box-shadow: 0 2px 0 #0001;
+    font-weight: normal;
+    z-index: -10;
+    transition: .2s cubic-bezier(0, 1, 1, 1);
+}
+
+.profileBox {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    padding: 16px;
+    padding-top: 0;
+}
+
+.profileBox a {
+    font-size: 0.8rem;
+}
+
+.userOnline:hover .userMinInfo {
+    box-shadow: 0 4px 0 #0001;
+}
+
+.userOnline:active .userMinInfo {
+    box-shadow: 0 2px 0 #0001;
+}
+
+#showUser:checked+.userMinInfo {
+    translate: 0 -16px;
+}
+
+.minTop {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.userMinInfo ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.minMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.minMenu ul {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    transition: .2s cubic-bezier(0, 1, 1, 1);
+}
+
+.minImage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    padding: 8px;
+    color: #fff;
+    background: #f60;
+    border-radius: 16px;
+    box-shadow: 0 2px 0 #0001;
+    outline: 1px solid #0001;
+}
+
+.minImage:hover {
+    filter: brightness(1.1);
+}
+
+.minImage:active {
+    color: #fffd;
+    filter: brightness(0.95);
+}
+
+.minInfo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+}
+
+#minCredit,
+#menuCredit {
+    font-weight: bold;
+    text-align: right;
+    font-size: 1.2rem;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#minName,
+#menuName {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4px;
+    font-weight: bold;
+    text-align: right;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#minName i {
+    position: relative;
+    top: -1px;
+    font-weight: normal;
+    font-size: 1em;
+}
+
+.minImage img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #0001;
+    outline: 4px solid #0001;
+    outline-offset: -2px;
+    overflow: hidden;
+    z-index: 50;
+}
+
+.sideMenu {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    top: 0;
+    left: 100%;
+    translate: 0;
+    width: 320px;
+    height: 100vh;
+    background: #fff;
+    outline: 1px solid #0001;
+    font-weight: normal;
+    z-index: 100;
+    order: 5;
+    overflow-y: auto;
+    transition: .2s cubic-bezier(0, 1, 1, 1);
+}
+
+.sideMenu::-webkit-scrollbar {
+    display: none;
+}
+
+.sideMenu .closeBox {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-bottom: 8px;
+    padding: 8px 16px;
+    padding-top: calc(29px + 8px);
+    outline: 1px solid #0001;
+    background: #fff;
+    z-index: 100;
+}
+
+#showSideMenu {
+    order: 4;
+}
+
+#showSideMenu:checked+.sideMenu {
+    translate: -100% 0;
+}
+
+.sideMenu .closeBox .searchForm {
+    outline: 1px solid #0001;
+    background: #fff;
+}
+
+.sideMenu .closeBox .searchForm>i {
+    color: #0004;
+}
+
+.sideMenu .closeBox .searchForm input {
+    color: #000;
+}
+
+.sideMenu .closeBox .searchForm input::placeholder {
+    color: #0004;
+}
+
+/* ------ Navigation Wrapper 2 --- */
+nav:nth-of-type(2) {
+    order: 2;
+}
+
+nav:nth-of-type(2) .wrapper {
+    gap: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.searchForm {
+    display: flex;
+    flex: 1;
+    outline: 1px solid #0001;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.searchForm>i {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 12px;
+    padding-bottom: 6px;
+    padding-right: 0;
+    color: #0006;
+    order: 1;
+}
+
+.searchForm input {
+    color: #000;
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    padding: 4px 12px;
+    background: none;
+    order: 2;
+}
+
+.searchForm input::placeholder {
+    color: #0006;
+}
+
+.searchForm input:focus+i {
+    display: flex;
+}
+
+.searchForm button {
+    order: 3;
+}
+
+/* ------ Navigation Wrapper 3 --- */
+nav:nth-of-type(3) {
+    border-bottom: 1px solid #0001;
+    filter: drop-shadow(0 2px 0 #0001);
+    z-index: 5;
+    order: 3;
+}
+
+.navShowMenu {
+    position: relative;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0 16px;
+    background: #f60;
+    outline: 1px solid #0001;
+    border-radius: 256px;
+    z-index: 50;
+}
+
+.navShowMenu>li>a {
+    font-weight: bold;
+}
+
+.navShowMenu>li:hover>a {
+    overflow: visible;
+}
+
+.navShowMenu>li>a.next::before {
+    top: 100%;
+    left: 50%;
+    background: #e50;
+    outline-offset: 0;
+    z-index: 100;
+}
+
+.navShowMenu>li:hover>a.next:before {
+    border: 2px solid #f60;
+    background: #fff;
+    outline: none;
+}
+
+.navShowMenu>li>a+ul {
+    left: 50%;
+    translate: -50% 0;
+    padding-top: 16px;
+}
+
+.navShowMenu>li:hover>a+ul {
+    display: flex;
+}
+
+.navShowMenu a {
+    padding: 6px 16px;
+    font-size: .9rem;
+}
+
+.navShowMenu li {
+    position: relative;
+}
+
+.navShowMenu ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    outline: 1px solid #0001;
+}
+
+.navShowMenu ul>li>a+ul {
+    top: 0;
+    left: 100%;
+}
+
+.navShowMenu ul>li>a+ul>li:first-of-type:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    translate: -50% -50%;
+    border-radius: 8px;
+    border: 2px solid #f60;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+}
+
+.navShowMenu ul>li:hover>a+ul {
+    display: flex;
+}
+
+.navShowMenu a i {
+    position: relative;
+    top: -2px;
+    font-size: 1.2rem;
+}
+
+/* */
+
+.navSideMenu {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 50;
+}
+
+.navSideMenu ul>li:hover {
+    background: #0001;
+}
+
+.navSideMenu>li {
+    background: #0001;
+    border-radius: 4px;
+}
+
+.navSideMenu>li:hover {
+    background: #f60;
+}
+
+.navSideMenu>li:hover>a {
+    color: #fff;
+}
+
+.navSideMenu>li>a {
+    border-radius: 4px;
+}
+
+.navSideMenu>li:hover>a.next {
+    overflow: visible;
+    border-radius: 4px 4px 0 0;
+}
+
+.navSideMenu>li>a.next::before {
+    top: 50%;
+    left: 0;
+    background: #0001;
+    outline-offset: 0;
+    z-index: 100;
+}
+
+.navSideMenu>li:hover>a.next:before {
+    border: 2px solid #f60;
+    background: #fff;
+    outline: none;
+}
+
+.navSideMenu>li>a+ul {
+    left: 50%;
+    translate: -50% 0;
+}
+
+.navSideMenu>li:hover>a+ul {
+    display: flex;
+}
+
+.navSideMenu ul>li>a {
+    padding-left: 28px;
+}
+
+.navSideMenu ul>li>a.next:before {
+    left: 16px;
+}
+
+.navSideMenu ul>li:hover>a.next:before {
+    border: 2px solid #f60;
+    background: #fff;
+    outline: none;
+}
+
+.navSideMenu a {
+    padding: 6px 16px;
+    font-size: 0.8rem;
+}
+
+.navSideMenu li {
+    position: relative;
+}
+
+.navSideMenu ul {
+    display: none;
+    flex-direction: column;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    outline: 1px solid #0001;
+}
+
+.navSideMenu ul>li>a+ul {
+    top: 0;
+    left: 0;
+}
+
+.navSideMenu ul>li>a+ul>li>a.next:before {
+    top: 50%;
+    left: 0;
+}
+
+.navSideMenu ul>li:hover>a+ul {
+    display: flex;
+}
+
+.navSideMenu a i {
+    position: relative;
+    top: -2px;
+    font-size: 1.2rem;
+}
+
+/* Main */
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+    order: 6;
+    background: #eee;
+}
+
+main::-webkit-scrollbar {
+    display: none;
+}
+
+main .wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* --- Header --- */
+header {
+    background: #eee;
+    outline: 1px solid #0001;
+    outline-offset: -1px;
+}
+
+/* --- Article --- */
+.categoryTitle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.5rem;
+    padding: 0 16px;
+    padding-top: 20px;
+    margin-bottom: -48px;
+    border-bottom: 1px solid #0001;
+    color: #fff;
+    font-weight: normal;
+    z-index: 2;
+}
+
+.categoryTitle::after {
+    left: unset;
+    right: 8px;
+}
+
+.categoryTitle span {
+    display: block;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.categoryTitle span:nth-child(1) {
+    position: relative;
+    display: flex;
+    gap: 8px;
+    padding: 4px 24px;
+    outline: 1px solid #0001;
+    background: #f60;
+    border-radius: 8px !important;
+    filter: drop-shadow(0 2px 0 #0001);
+}
+
+.categoryTitle span:nth-child(1) i {
+    position: relative;
+    top: 8px;
+    font-weight: normal;
+}
+
+.categoryTitle span:nth-child(2) {
+    text-align: right;
+    color: #0006;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* --- Footer --- */
+footer {
+    flex: 1;
+    border-top: 1px solid #0001;
+    background: #0001;
+}
+
+footer .wrapper {
+    padding: 8px 16px;
+}
+
+/* --- Product Box --- */
+.itemBox {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    padding-top: 52px;
+    margin-top: -4px;
+    gap: 16px;
+}
+
+.searchItem {
+    position: sticky;
+    top: 0;
+    display: flex;
+    gap: 8px;
+    flex: 1;
+    margin: 0 -16px;
+    padding: 8px 16px;
+    padding-top: 24px;
+    margin-top: -16px;
+    background: #eee;
+    border-bottom: 1px solid #0001;
+    z-index: 1;
+}
+
+.searchItem>i {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 12px;
+    padding-bottom: 6px;
+    padding-right: 0;
+    color: #0004;
+    order: 1;
+}
+
+.searchItem input {
+    color: #000;
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    padding: 4px 12px;
+    outline: 1px solid #0001;
+    background: #0001;
+    order: 2;
+}
+
+.searchItem input::placeholder {
+    color: #0004;
+}
+
+.searchItem input:focus+i {
+    padding-right: 12px;
+    display: flex;
+    outline: 1px solid #0001;
+    border-radius: 256px;
+    background: #0001;
+}
+
+.itemAmount {
+    position: relative;
+    top: -2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 24px;
+    padding-bottom: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    white-space: nowrap;
+    border: none;
+    background: #f60;
+    color: #fff;
+    outline: 1px solid #0001;
+    box-shadow: 0 2px 0 #e50;
+    filter: drop-shadow(0 2px 0 #0001);
+    border-radius: 4px;
+    text-decoration: none;
+    order: 3;
+}
+
+.itemAmount span {
+    position: relative;
+    top: 2px;
+}
+
+#noneItem {
+    display: flex;
+    justify-content: center;
+    color: #0004;
+    font-size: 1rem;
+    padding: 16px;
+    padding-top: 0;
+}
+
+/* Product Grid */
+.itemGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+}
+
+/* Product Card */
+.productCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    outline: 1px solid #0001;
+    outline-offset: -1px;
+    border-radius: 4px;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 0 0 0 #0001;
+    color: #000;
+}
+
+.productCard:hover {
+    cursor: pointer;
+    outline: 1px solid #f60;
+    filter: brightness(0.975);
+}
+
+.productCard:active {
+    filter: brightness(0.95);
+}
+
+.productCard label {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 8px;
+}
+
+.productCard .imgBox {
+    position: relative;
+    display: flex;
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: #0001;
+    padding: 1px;
+    border-radius: 4px;
+    overflow: hidden;
+    filter: drop-shadow(0 0 4px #0001);
+}
+
+.productCard .imgBox .saleText {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 2px 16px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: #fff;
+    background: #f60;
+    outline: 1px solid #0001;
+    border-radius: 4px 0 0 0;
+}
+
+.productCard .imgBox img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.productCard .productDetail {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    flex: 1;
+    padding: 16px;
+    font-size: 1rem;
+    overflow: hidden;
+}
+
+.productCard .productDetail .productName {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 1em;
+}
+
+.productCard .productDetail .productPrice {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 100%;
+}
+
+.productCard .productDetail .productSale {
+    display: flex;
+    gap: 4px;
+    font-size: 0.8em;
+    line-height: 100%;
+    color: #0004;
+}
+
+.productCard .productDetail .productSale span:first-of-type {
+    text-decoration: line-through;
+}
+
+.productCard .productDetail .productStar {
+    display: flex;
+    align-items: center;
+    color: #f60;
+    line-height: 100%;
+    margin-top: auto;
+}
+
+.productCard .productDetail .productStar .productVoteAmount {
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-left: 4px;
+}
+
+.productCard2 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    outline: 1px solid #0001;
+    outline-offset: -1px;
+    border-radius: 4px;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 0 0 0 #0001;
+    color: #000;
+    height: 337.5px;
+}
+
+.productCard2:hover {
+    cursor: pointer;
+    outline: 1px solid #f60;
+    filter: brightness(0.975);
+}
+
+.productCard2:active {
+    filter: brightness(0.95);
+}
+
+.productCard2 label {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 8px;
+}
+
+.productCard2 .imgBox {
+    position: relative;
+    display: flex;
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: #0001;
+    padding: 1px;
+    border-radius: 4px;
+    overflow: hidden;
+    filter: drop-shadow(0 0 4px #0001);
+}
+
+.productCard2 .imgBox .saleText {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 2px 16px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: #fff;
+    background: #f60;
+    outline: 1px solid #0001;
+    border-radius: 4px 0 0 0;
+}
+
+.productCard2 .imgBox img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.productCard2 .productDetail {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    flex: 1;
+    padding: 16px;
+    font-size: 1rem;
+    overflow: hidden;
+}
+
+.productCard2 .productDetail .productName {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 1em;
+}
+
+.productCard2 .productDetail .productPrice {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 100%;
+}
+
+.productCard2 .productDetail .productSale {
+    display: flex;
+    gap: 4px;
+    font-size: 0.8em;
+    line-height: 100%;
+    color: #0004;
+}
+
+.productCard2 .productDetail .productSale span:first-of-type {
+    text-decoration: line-through;
+}
+
+.productCard2 .productDetail .productStar {
+    display: flex;
+    align-items: center;
+    color: #f60;
+    line-height: 100%;
+    margin-top: auto;
+}
+
+.productCard2 .productDetail .productStar .productVoteAmount {
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-left: 4px;
+}
+
+/* Product Info */
+
+.productInfo {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    outline: 1px solid #0001;
+    outline-offset: -1px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 16px;
+    text-decoration: none;
+    box-shadow: 0 0 0 #0001;
+    color: #000;
+}
+
+.productInfoBox {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 0 0 0 #0001;
+    color: #000;
+}
+
+.productInfoBox label {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.productInfoBox a.chatBtn {
+    position: absolute;
+    right: 44px;
+    bottom: 0;
+    margin: 8px;
+}
+
+.productInfoBox .productCol {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background: #0001;
+}
+
+.productInfoBox .productCol .imgBox {
+    position: relative;
+    display: flex;
+    aspect-ratio: 4/3;
+    background: #0001;
+    outline: 1px solid #0001;
+    border-radius: 4px 0 0 4px;
+    overflow: hidden;
+}
+
+.productInfoBox .productCol .imgBox img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.productInfoBox .productCol .imgBoxTemp {
+    position: relative;
+    display: flex;
+    background: #0001;
+    outline: 1px solid #0001;
+    border-radius: 4px 0 0 4px;
+    overflow: hidden;
+}
+
+.productInfoBox .productCol .imgBoxTemp img {
+    object-fit: cover;
+    width: 100%;
+    border-top: 1px solid #eee;
+}
+
+.productInfoBox .productCol .imgBoxTemp img:hover {
+    cursor: pointer;
+    filter: brightness(.95);
+    outline: 1px solid #f60;
+}
+
+.productInfoBox .productCol .imgBoxTemp img:active {
+    filter: brightness(.9);
+}
+
+.productInfoBox .productInfoDetail {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    flex: 1;
+    padding: 16px;
+    font-size: 1rem;
+    overflow: hidden;
+    outline: 1px solid #0001;
+    outline-offset: -1px;
+    border-radius: 0 8px 8px 8px;
+}
+
+.productInfoBox .productInfoDetail .productInfoName {
+    text-align: left;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.productInfoBox .productInfoDetail .productInfoPrice {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 100%;
+    margin-top: 8px;
+}
+
+.productInfoBox .productInfoDetail .productInfoSale {
+    display: flex;
+    gap: 4px;
+    font-size: 0.8em;
+    line-height: 100%;
+    color: #0004;
+    margin-bottom: 8px;
+}
+
+.productInfoBox .productInfoDetail .productInfoSale span:first-of-type {
+    text-decoration: line-through;
+}
+
+.productInfoBox .productInfoDetail .productInfoDescription {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: #0001;
+    padding: 16px;
+    outline: 1px solid #0001;
+    outline-offset: -1px;
+    border-radius: 4px;
+    overflow: hidden;
+    font-size: 1em;
+}
+
+.productInfo .productInfoDetail .productInfoDescription .productInfoDescriptionTitle {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 1.5rem;
+    line-height: 100%;
+    color: #0004;
+}
+
+.productInfo .productInfoDetail .productInfoDescription p {
+    overflow: auto;
+    text-indent: 2rem;
+    max-height: 128px;
+    border-top: 1px solid #0001;
+    padding-top: 8px;
+}
+
+.productInfoBox .productInfoDetail .productInfoStar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #f60;
+    line-height: 100%;
+}
+
+.productInfoBox .productInfoDetail .productInfoStar .productVoteAmount {
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-left: 4px;
+}
+
+.productInfoBox .productInfoDetail .shopBoxDetail {
+    display: flex;
+    padding: 8px;
+    gap: 16px;
+    background: #0001;
+    outline: 1px solid #0001;
+    border-radius: 4px;
+}
+
+.productInfoBox .productInfoDetail .shopBoxDetail .shopBoxDetailV {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    line-height: 100%;
+    flex: 1;
+}
+
+.productInfoBox .productInfoDetail .shopBoxDetail .shopBoxDetailV .shopBoxDetailName {
+    display: flex;
+    align-items: center;
+}
+
+.productInfoBox .productInfoDetail .shopBoxDetail a.img {
+    width: 52px;
+    height: 52px;
+    overflow: hidden;
+    border-radius: 4px;
+    border: 2px solid #0001;
+}
+
+.productInfoBox .productInfoDetail .shopBoxDetail a.img:hover {
+    filter: brightness(1.1);
+}
+
+.productInfoBox .productInfoDetail .shopBoxDetail a.img:active {
+    filter: brightness(.95);
+}
+
+.productInfoBox .productInfoDetail .productInfoForm {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.productInfoBox .productInfoDetail .productInfoForm .desTitle {
+    font-size: .8rem;
+    color: #000;
+}
+
+.productInfoBox .productInfoDetail .productInfoForm .box {
+    display: flex;
+    gap: 8px;
+}
+
+.productInfoBox .productInfoDetail .productInfoForm .box:first-child {
+    flex: 1;
+}
+
+.productInfoBox .productInfoDetail .productInfoForm .box input {
+    color: #000;
+    width: 100%;
+    flex: 1;
+    font-size: 1rem;
+    border: none;
+    outline: 1px solid #0001;
+    outline-offset: -1px;
+    border-radius: 4px;
+    padding: 4px 12px;
+    background: #fff;
+    text-align: center;
+    pointer-events: none;
+}
+
+.productInfoBox .productInfoDetail .productInfoForm .box input::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+.productInfoBox .productInfoDetail .productInfoForm .box input::placeholder {
+    color: #0006;
+}
+
+.productInfoBox .productInfoDetail .productInfoForm .box:last-child a:first-of-type {
+    flex: 1;
+}
+
+.productInfoBox .productInfoDetail .productInfoReview {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: #0001;
+    padding: 16px;
+    outline: 1px solid #0001;
+    outline-offset: -1px;
+    border-radius: 4px;
+    overflow: hidden;
+    font-size: 1em;
+}
+
+.productInfo .productInfoDetail .productInfoReview .productInfoReviewDescriptionTitle {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 1.5rem;
+    line-height: 100%;
+    color: #0004;
+}
+
+.productInfo .productInfoDetail .productInfoReview .productInfoReviewItem {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-height: 256px;
+    overflow: auto;
+    border-top: 1px solid #0001;
+    padding-top: 16px;
+}
+
+.productInfo .productInfoDetail .productInfoReview button {
+    width: 100%;
+}
+
+.itemReview {
+    display: flex;
+    flex-direction: column;
+    outline: 1px solid #0001;
+    border-radius: 4px;
+}
+
+.itemReview .itemReviewProfile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    background: #0001;
+    overflow: hidden;
+    border-bottom: 1px solid #0001;
+    border-radius: 4px 4px 0 0;
+}
+
+.itemReview .itemReviewProfile img {
+    width: 52px;
+    height: 52px;
+    overflow: hidden;
+    border-radius: 4px;
+    border: 2px solid #0001;
+}
+
+.itemReview .itemReviewDetail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 0 0 4px 4px;
+}
+
+/* Shop Card */
+.shopCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    outline: 1px solid #0001;
+    outline-offset: 0px;
+    border-radius: 4px;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 0 0 0 #0001;
+    color: #000;
+}
+
+.shopCard:hover {
+    cursor: pointer;
+    outline: 1px solid #f60;
+    filter: brightness(0.975);
+}
+
+.shopCard:active {
+    filter: brightness(0.95);
+}
+
+.shopCard label {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 8px;
+}
+
+.shopCard .imgBox {
+    position: relative;
+    display: flex;
+    width: 100%;
+    aspect-ratio: 1/1;
+    background: #0001;
+    border-radius: 4px;
+    outline: 1px solid #0001;
+    overflow: hidden;
+}
+
+.shopCard .imgBox img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.shopCard .shopDetail {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    flex: 1;
+    padding: 16px;
+    font-size: 1rem;
+    overflow: hidden;
+}
+
+.shopCard .shopDetail .shopName {
+    text-align: center;
+    font-weight: bold;
+}
+
+.shopCard .shopDetail .shopDescription {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 0.8em;
+    margin-bottom: 8px;
+}
+
+.shopCard .shopDetail .shopStar {
+    display: flex;
+    align-items: center;
+    color: #f60;
+    line-height: 100%;
+    margin-top: auto;
+}
+
+.shopCard .shopDetail .shopStar .shopVoteAmount {
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-left: 4px;
+}
+
+/* Shop Info */
+.shopInfo {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background: #0001;
+    outline: 1px solid #0001;
+    outline-offset: -1px;
+    border-radius: 4px;
+    overflow: hidden;
+    height: 256px;
+    margin-top: 16px;
+    text-decoration: none;
+    box-shadow: 0 0 0 #0001;
+    color: #000;
+}
+
+.shopInfo label {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 8px;
+}
+
+.shopInfo a.chatBtn {
+    position: absolute;
+    right: 44px;
+    bottom: 0;
+    margin: 8px;
+}
+
+.shopInfo .imgBox {
+    position: relative;
+    display: flex;
+    height: 100%;
+    aspect-ratio: 1/1;
+    background: #0001;
+    outline: 1px solid #0001;
+    border-radius: 4px 0 0 4px;
+    overflow: hidden;
+}
+
+.shopInfo .imgBox img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.shopInfo .shopInfoDetail {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    flex: 1;
+    padding: 16px;
+    font-size: 1rem;
+    overflow: hidden;
+}
+
+.shopInfo .shopInfoDetail .shopInfoName {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0 16px;
+    outline: 1px solid #0001;
+    border-radius: 4px;
+    box-shadow: 0 2px 0 #0001;
+    color: #fff;
+    background: #f60;
+}
+
+.shopInfo .shopInfoDetail .shopInfoDescription {
+    overflow: auto;
+    display: block;
+    height: min-content;
+    font-size: 1em;
+    margin-bottom: 8px;
+}
+
+.shopInfo .shopInfoDetail .shopInfoStar {
+    display: flex;
+    align-items: center;
+    color: #f60;
+    line-height: 100%;
+    margin-top: auto;
+}
+
+.shopInfo .shopInfoDetail .shopInfoStar .shopVoteAmount {
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-left: 4px;
+}
+
+/* Form */
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    filter: drop-shadow(0 4px 0 #0001);
+}
+
+.form fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 480px;
+    max-width: 100%;
+    height: max-content;
+    margin: 16px;
+    padding: 16px;
+    border: none;
+    border: 1px solid #0001;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.form fieldset legend {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding: 0 16px;
+    outline: 1px solid #0001;
+    font-size: 2rem;
+    box-shadow: 0 2px 0 #0001;
+    font-weight: bold;
+    border-radius: 4px;
+    color: #fff;
+    background: #f60;
+}
+
+.form fieldset label {
+    font-size: 1rem;
+}
+
+.form fieldset input {
+    color: #000;
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+    outline: 1px solid #0001;
+    background: #0001;
+    border-radius: 4px;
+    padding: 4px 12px;
+}
+
+.form fieldset input::placeholder {
+    color: #0004;
+}
+
+.form fieldset input:focus+i {
+    display: flex;
+}
+
+.form fieldset textarea {
+    resize: none;
+    outline: 1px solid #0001;
+    padding: 8px;
+    font-size: 1rem;
+    border: none;
+}
+
+.form fieldset button {
+    width: 100%;
+}
+
+.form fieldset .iconList {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.hBox {
+    display: flex;
+    gap: 8px;
+}
+
+.vBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.smallText {
+    font-size: 0.9rem;
+}
+
+.bgLogo {
+    position: absolute;
+    left: 50%;
+    translate: -50% -30%;
+    width: 256px;
+    max-width: 100%;
+    padding: 0 16px;
+    filter: drop-shadow(0 4px 0 #0001);
+}
+
+section.v {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+}
+
+section.v:not(:last-child) {
+    padding-right: 16px;
+    border-right: 1px solid #0001;
+}
+
+section.h {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    flex: 1;
+}
+
+#errorAlert {
+    display: none;
+    align-items: center;
+    gap: 8px;
+    color: #f10;
+    font-size: 0.9rem;
+}
+
+#errorAlert i {
+    position: relative;
+    top: -1px;
+    color: #f10;
+    font-size: 1.2rem;
+}
+
+.reviewForm {
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    background: #1268;
+    backdrop-filter: blur(2px);
+    transition: .2s cubic-bezier(0, 1, 1, 1);
+    transition: display .2s .2s;
+}
+
+.reviewForm .wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.reviewForm .form {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border-radius: 4px;
+}
+
+.reviewForm .form fieldset legend {
+    justify-content: space-between;
+}
+
+.reviewForm .form fieldset legend a {
+    color: #fff;
+}
+
+/* Product Slider */
+.productSlider {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
+.productSliderTitle {
+    position: relative;
+    top: -2px;
+    box-shadow: 0 2px 0 #e50;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px 16px;
+    background: #f60;
+    border-radius: 4px;
+    color: #fff;
+    outline: 1px solid #0001;
+    filter: drop-shadow(0 2spx 0 #0001);
+    z-index: 5;
+}
+
+.productSliderTitle h1 {
+    font-size: 2em;
+}
+
+.productSliderTitle p {
+    font-size: 1em;
+}
+
+.productSliderWrapper {
+    margin-top: -4px;
+    padding: 4px;
+    padding-top: 8px;
+    background: #0001;
+    outline: 1px solid #0001;
+}
+
+.sectionTitle {
+    display: flex;
+    justify-content: center;
+    padding: 8px 16px;
+    text-align: center;
+    color: #0006;
+    margin-top: 16px;
+}
+
+.categoryBox {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px;
+}
+
+.categoryBox a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+    max-width: 196px;
+    text-decoration: none;
+    color: #0006;
+}
+
+.categoryBox a:active {
+    filter: brightness(0.95);
+}
+
+.categoryBox a .imgBox {
+    display: flex;
+    max-width: 196px;
+    border-radius: 256px;
+    outline: 1px solid #0001;
+    overflow: hidden;
+    filter: saturate(0);
+}
+
+.categoryBox a:hover .imgBox {
+    outline: 1px solid #f60;
+    filter: saturate(1);
+}
+
+.categoryBox a .imgBox img {
+    background: #0001;
+    aspect-ratio: 1/1;
+    width: 100%;
+    padding: 25%;
+    filter: hue-rotate(-30deg) saturate(5);
+}
+
+.categoryBox a p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+
+/* Profile */
+.here {
+    position: relative;
+    background: #0001;
+    border-radius: 4px;
+    padding: 4px;
+    padding-left: 18px;
+}
+
+.here::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    translate: -50% -50%;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    background: #0004;
+}
+
+.profileMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px !important;
+    flex: 1;
+    padding: 16px 0;
+    width: 100%;
+    max-width: 256px;
+}
+
+.profileMenu a {
+    font-size: 0.8rem;
+}
+
+.profileContent {
+    padding: 16px 0;
+}
+
+.profileContent .title {
+    padding: 0 0 16px 0;
+}
+
+.profileContent .title section {
+    padding: 0;
+    font-size: 1.5rem !important;
+    color: #0006;
+}
+
+.profileImgBox {
+    display: flex;
+    align-items: flex-end;
+    padding: 16px;
+    gap: 16px;
+    border-radius: 8px;
+    outline: 1px solid #0001;
+    background: #126;
+    margin-bottom: 16px;
+}
+
+.profileImgBox img {
+    object-fit: cover;
+    width: 128px;
+    height: 128px;
+    position: relative;
+    top: 25%;
+    border-radius: 8px;
+    overflow: hidden;
+    outline: 4px solid #0001;
+    outline-offset: -2px;
+}
+
+.profileImgBox p.username {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+#topupAmount {
+    color: #000;
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+    outline: 1px solid #0001;
+    border-radius: 4px;
+    padding: 4px 12px;
+    background: #0001;
+}
+
+#iconBack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 224px;
+    height: 224px;
+    font-size: 15rem;
+    margin: auto;
+    background: #0001;
+    outline: 1px solid #0001;
+    border-radius: 256px;
+    color: #f60;
+}
+
+#backIndex {
+    font-size: 1.2rem;
+    margin: auto;
+    color: #0006;
+}
+
+.profileGrid {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px !important;
+    padding: 16px 0;
+}
+
+.profileGridCart {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px !important;
+    padding: 16px 0;
+}
+
+.flexH {
+    flex-direction: row !important;
+}
+
+.flexH .imgBox {
+    width: 40% !important;
+}
+
+.flexH .imgBox .saleText {
+    bottom: 0 !important;
+    left: 0 !important;
+    right: unset !important;
+    border-radius: 0 4px 0 0 !important;
+}
+
+.flexH .productDetail .productName {
+    font-size: clamp(0.8em, 4vw, 1em) !important;
+    -webkit-line-clamp: 1 !important;
+}
+
+.flexH .productDetail .productPrice {
+    margin-top: auto;
+    font-size: clamp(1em, 5vw, 2em) !important;
+}
+
+.flexH .productDetail .productSale {
+    font-size: clamp(0.6em, 3vw, 0.8em) !important;
+}
+
+.flexH .productDetail .productStar {
+    font-size: 0.8em !important;
+}
+
+.chatShop {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border-right: 1px solid #0001;
+    padding-right: 16px;
+}
+
+.shopFront {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.shopFront:hover {
+    cursor: pointer;
+    background: #0001;
+}
+
+.shopFront img {
+    object-fit: cover;
+    width: 48px;
+    height: 48px;
+    outline: 4px solid #0001;
+    border-radius: 256px;
+    outline-offset: -2px;
+}
+
+.chatDetail {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 16px;
+    flex: 1;
+}
+
+.shopBox,
+.userBox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.userBox {
+    margin-left: auto;
+}
+
+.shopText,
+.userText {
+    padding: 4px 16px;
+    background: #0001;
+    width: max-content;
+    border-radius: 256px;
+    outline: 1px solid #0001;
+}
+
+.userText {
+    text-align: end;
+}
+
+.shopTextBox,
+.userTextBox {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.userTextBox {
+    align-items: flex-end;
+}
+
+.shopBox img {
+    object-fit: cover;
+    width: 40px;
+    height: 40px;
+    outline: 1px solid #0001;
+    border-radius: 256px;
+}
+
+.userBox {
+    justify-content: flex-end;
+}
+
+.textMessage {
+    display: flex;
+    gap: 8px;
+    border-top: 1px solid #0001;
+    padding-top: 16px;
+}
+
+.textMessage input {
+    color: #000;
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    padding: 4px 12px;
+    outline: 1px solid #0001;
+    background: #0001;
+}
+
+.textMessage button {
+    font-size: 1rem;
+    border: none;
+    width: 25%;
+}

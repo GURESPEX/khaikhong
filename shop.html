@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/slide.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <title>ขายของ - ร้านค้าทั้งหมด</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <main>
+            <article>
+                <div class="wrapper">
+                    <h1 class="categoryTitle"><span>ร้านค้าทั้งหมด</span></h1>
+                    <div class="itemBox">
+                        <div class="searchItem">
+                            <input type="text" size="1" placeholder="ค้นหาร้านค้า"
+                                oninput="appendSearchShop(this.value)">
+                            <i class="ri-search-line"></i>
+                            <div class="itemAmount"><span id="itemAmount">0</span><span>ร้าน</span></div>
+                        </div>
+                        <div class="itemGrid" id="itemGrid">
+                            <!-- Shop Item -->
+                        </div>
+                        <p id="noneItem">ไม่พบร้านค้า</p>
+                    </div>
+                </div>
+            </article>
+            <footer>
+                <div class="wrapper">
+                    <a href="terms.html" class="textBtn"
+                        onclick="localStorage.setItem('productTitle',this.innerHTML)">เงื่อนไขการใช้บริการ</a>
+                    <a href="about.html" class="textBtn"
+                        onclick="localStorage.setItem('productTitle',this.innerHTML)">เกี่ยวกับเรา</a>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="component/navigation.js"></script>
+
+    <script src="data/store.js"></script>
+    <script src="data/user.js"></script>
+
+    <script src="js/global.js"></script>
+    <script src="js/shop.js"></script>
+    <script src="js/slide.js"></script>
+
+</body>
+
+</html>

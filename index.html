@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/slide.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <title>ขายของ</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <main>
+            <header>
+                <div class="wrapper">
+                    <div class="swiper swiperAds">
+                        <div class="swiper-wrapper">
+                            <img class="swiper-slide" src="img/advert_image/ADS0.png">
+                            <img class="swiper-slide" src="img/advert_image/ADS1.png">
+                            <img class="swiper-slide" src="img/advert_image/ADS2.png">
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+            </header>
+            <article>
+                <div class="wrapper">
+                    <h2 class="sectionTitle">เครื่องใช้ไฟฟ้า</h2>
+                    <div class="categoryBox">
+                        <a href="product.html" class="categoryLink"
+                            onclick="localStorage.setItem('productTitle','เครื่องใช้ไฟฟ้าขนาดใหญ่')">
+                            <div class="imgBox">
+                                <img src="img/other_image/O0.png">
+                            </div>
+                            <p>ขนาดใหญ่</p>
+                        </a>
+                        <a href="product.html" class="categoryLink"
+                            onclick="localStorage.setItem('productTitle','เครื่องใช้ไฟฟ้าขนาดเล็ก')">
+                            <div class="imgBox">
+                                <img src="img/other_image/O1.png">
+                            </div>
+                            <p>ขนาดเล็ก</p>
+                        </a>
+                        <a href="product.html" class="categoryLink"
+                            onclick="localStorage.setItem('productTitle','เครื่องใช้ไฟฟ้าภายในบ้าน')">
+                            <div class="imgBox">
+                                <img src="img/other_image/O2.png">
+                            </div>
+                            <p>ภายในบ้าน</p>
+                        </a>
+                        <a href="product.html" class="categoryLink"
+                            onclick="localStorage.setItem('productTitle','เครื่องใช้ไฟฟ้าส่วนบุคคล')">
+                            <div class="imgBox">
+                                <img src="img/other_image/O3.png">
+                            </div>
+                            <p>ส่วนบุคคล</p>
+                        </a>
+                    </div>
+                    <div class="productSlider" id="productSlider">
+                        <!-- Product Slider -->
+                    </div>
+                </div>
+            </article>
+            <footer>
+                <div class="wrapper">
+                    <a href="terms.html" class="textBtn"
+                        onclick="localStorage.setItem('productTitle',this.innerHTML)">เงื่อนไขการใช้บริการ</a>
+                    <a href="about.html" class="textBtn"
+                        onclick="localStorage.setItem('productTitle',this.innerHTML)">เกี่ยวกับเรา</a>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="component/navigation.js"></script>
+
+    <script src="data/store.js"></script>
+    <script src="data/user.js"></script>
+
+    <script src="js/global.js"></script>
+    <script src="js/slide.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
